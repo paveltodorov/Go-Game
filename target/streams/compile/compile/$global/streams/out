@@ -1,42 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:9:48: not found: value Piece[0m
-[0m[[0m[31merror[0m] [0m[0m  def getEnemyChains(): Set[Chain] = getChains(Piece.oponentPiece) [0m
-[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:11:53: not found: value Piece[0m
-[0m[[0m[31merror[0m] [0m[0m  def getThisPlayerChains(): Set[Chain] = getChains(Piece)  [0m
-[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:17:82: polymorphic expression cannot be instantiated to expected type;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : [A]scala.collection.immutable.Set[A][0m
-[0m[[0m[31merror[0m] [0m[0m required: Chain[0m
-[0m[[0m[31merror[0m] [0m[0m  def getChainContaining(x:Int, y: Int): Chain = BFS(Seq((x, y)), Set.empty, Set.empty)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:23:23: not found: value neighbors[0m
-[0m[[0m[31merror[0m] [0m[0m    	val neighbours = neighbors(position._1, position._2).toSeq.filter {[0m
-[0m[[0m[31merror[0m] [0m[0m    	                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:24:48: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Any[0m
-[0m[[0m[31merror[0m] [0m[0m required: Int[0m
-[0m[[0m[31merror[0m] [0m[0m              case(i, j) => !visited.contains((i, j)) && positions(i)(j) == positions(pos._1)(pos._2)[0m
-[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:24:51: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Any[0m
-[0m[[0m[31merror[0m] [0m[0m required: Int[0m
-[0m[[0m[31merror[0m] [0m[0m              case(i, j) => !visited.contains((i, j)) && positions(i)(j) == positions(pos._1)(pos._2)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:24:68: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Any[0m
-[0m[[0m[31merror[0m] [0m[0m required: Int[0m
-[0m[[0m[31merror[0m] [0m[0m              case(i, j) => !visited.contains((i, j)) && positions(i)(j) == positions(pos._1)(pos._2)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:24:87: not found: value pos[0m
-[0m[[0m[31merror[0m] [0m[0m              case(i, j) => !visited.contains((i, j)) && positions(i)(j) == positions(pos._1)(pos._2)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:24:95: not found: value pos[0m
-[0m[[0m[31merror[0m] [0m[0m              case(i, j) => !visited.contains((i, j)) && positions(i)(j) == positions(pos._1)(pos._2)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:26:9: not found: value visit[0m
-[0m[[0m[31merror[0m] [0m[0m        visit(toVisit.tail ++ neighbours, visited + position, chain.addElement(pos))[0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\go\src\main\scala\Board.scala:26:80: not found: value pos[0m
-[0m[[0m[31merror[0m] [0m[0m        visit(toVisit.tail ++ neighbours, visited + position, chain.addElement(pos))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                               ^[0m
-[0m[[0m[31merror[0m] [0m[0m11 errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\main\scala\GameLogic\GameGrid.scala:126:85: Int does not take parameters[0m
+[0m[[0m[31merror[0m] [0m[0m      0 <= tuple._1 && tuple._1 < grid.size && 0 <= tuple._2 && tuple._2 < grid.size(0)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

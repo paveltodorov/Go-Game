@@ -1,0 +1,103 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\BoardTest.scala:5:12: object scalatest is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.{FlatSpec, Matchers}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\BoardTest.scala:7:25: not found: type FlatSpec[0m
+[0m[[0m[31merror[0m] [0m[0mclass BoardTest extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\BoardTest.scala:7:39: not found: type Matchers[0m
+[0m[[0m[31merror[0m] [0m[0mclass BoardTest extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\BoardTest.scala:8:27: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "getThisPlayerChains()" should "return the chains of the current player" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\BoardTest.scala:9:10: value shouldEqual is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    true shouldEqual true[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:3:12: object scalatest is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.{FlatSpec, Matchers}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:6:28: not found: type FlatSpec[0m
+[0m[[0m[31merror[0m] [0m[0mclass GameGridTest extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:6:42: not found: type Matchers[0m
+[0m[[0m[31merror[0m] [0m[0mclass GameGridTest extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:8:27: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "getChains(BlackPiece)" should "return the chains belonging to blackplayer" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:17:17: value shouldEqual is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    chains.size shouldEqual 2[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:18:57: value shouldEqual is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    chains.contains(Set((0,2),(0,3),(1,1),(1,2),(1,3))) shouldEqual true[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:19:39: value shouldEqual is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    chains.contains(Set((2,0),(3,0))) shouldEqual true[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:22:81: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "getChains(BlackPiece) if the black player has no pieces return an empty set" should "return an empty set" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:31:17: value shouldEqual is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    chains.size shouldEqual 0[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:34:27: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "getChains(WhitePiece)" should "return the chains belonging to white player" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:43:17: value shouldEqual is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    chains.size shouldEqual 2[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:44:39: value shouldEqual is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    chains.contains(Set((1,4),(1,5))) shouldEqual true[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:45:39: value shouldEqual is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    chains.contains(Set((2,1),(2,2))) shouldEqual true[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:48:32: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m"putPiece(((0,4),BlackPiece))" should "put a piece on the grid " in {[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:58:22: value shouldBe is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    newGrid.toString shouldBe "..BBB.\n.BBBWW\nBWW...\nB....."[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:61:31: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m "remove(((1,1),BlackPiece))" should "remove a piece on the grid " in {[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:71:22: value shouldBe is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    newGrid.toString shouldBe "..BB..\n..BBWW\nBWW...\nB....."[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:74:18: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "removeChains" should "given positions from the board" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:84:22: value shouldBe is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m    newGrid.toString shouldBe "......\n.BBBWW\nBWW...\nB....."[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:87:18: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "getLiberties" should "get all the liberties of a chain" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:98:35: value shouldBe is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m    firstWhiteChainLiberties.size shouldBe 4[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:99:30: value shouldBe is not a member of Set[(Int, Int)][0m
+[0m[[0m[31merror[0m] [0m[0m    firstWhiteChainLiberties shouldBe Set((0,5),(0,4),(2,4),(2,5))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:101:41: value shouldBe is not a member of Set[(Int, Int)][0m
+[0m[[0m[31merror[0m] [0m[0m    grid.getLiberties(Set((2,0),(3,0))) shouldBe Set((1,0),(3,1))[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:103:41: value shouldBe is not a member of Set[(Int, Int)][0m
+[0m[[0m[31merror[0m] [0m[0m    grid.getLiberties(Set((2,0),(3,0))) shouldBe Set((1,0),(3,1))[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:105:59: value shouldBe is not a member of Set[(Int, Int)][0m
+[0m[[0m[31merror[0m] [0m[0m    grid.getLiberties(Set((0,2),(0,3),(1,1),(1,2),(1,3))) shouldBe Set((0,1),(1,0),(0,4),(2,3))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:108:13: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m "toString" should "convert a grid to string" in {[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:116:17: value shouldEqual is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  grid.toString shouldEqual "..BB..\n.BBBWW\nBWW...\nB....."[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:119:44: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m"getCapturedPiecesBelongingTo(BlackPiece)" should "return all the captured pieces belonging to the Black player" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala:129:18: value shouldEqual is not a member of grid.Chain[0m
+[0m[[0m[31merror[0m] [0m[0m  capturedPieces shouldEqual Set((0,2), (0,3), (3,0))[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m34 errors found[0m

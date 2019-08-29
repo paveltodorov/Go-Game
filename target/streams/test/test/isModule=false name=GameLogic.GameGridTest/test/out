@@ -1,0 +1,19 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mGameGridTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mgetChains(BlackPiece)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the chains belonging to blackplayer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mgetChains(BlackPiece) if the black player has no pieces[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return an empty set[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mgetChains(WhitePiece)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the chains belonging to white player[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mputPiece(((0,4),BlackPiece))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should put a piece on the grid[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mremove(((1,1),BlackPiece))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should remove a piece from the grid[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mremoveChains[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should given positions from the board[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mgetLiberties[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should get all the liberties of a chain[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mtoString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should convert a grid to string[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mgetCapturedPiecesBelongingTo(BlackPiece)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return all the captured pieces belonging to the Black player[0m[0m
