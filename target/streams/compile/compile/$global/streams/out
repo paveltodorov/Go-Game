@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Pavel\Documents\Scala\Go\src\main\scala\GameLogic\GameGrid.scala:126:85: Int does not take parameters[0m
-[0m[[0m[31merror[0m] [0m[0m      0 <= tuple._1 && tuple._1 < grid.size && 0 <= tuple._2 && tuple._2 < grid.size(0)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere was one feature warning; re-run with -feature for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

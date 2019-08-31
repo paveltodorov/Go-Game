@@ -5,6 +5,14 @@ package GameLogic
 //import cats.effect.IO
 
 object Main extends App {
+
+  var gameState = GameState().playMove(Move((1,1),BlackPiece))
+   
+  gameState match {
+   case Right(a) => println(a.toString)
+   case _ => println("error")
+}
+
 }
  //def errorToDescription
 

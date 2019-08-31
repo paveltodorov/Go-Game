@@ -1,1 +1,1 @@
-["GameLogic.Main"]
+["Client.Client","GameLogic.Main","Server.GoServer"]

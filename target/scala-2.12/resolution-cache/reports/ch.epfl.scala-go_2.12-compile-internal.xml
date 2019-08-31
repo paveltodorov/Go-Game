@@ -7,8 +7,21 @@
 		revision="1.0"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190830021715"/>
+		date="20190830170647"/>
 	<dependencies>
+		<module organisation="org.scala-lang" name="scala-swing">
+			<revision name="2.10.7" status="release" pubdate="20171103220720" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.7/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+         "/>
+				<metadata-artifact status="successful" details="" size="1940" time="665" location="C:\Users\Pavel\.ivy2\cache\org.scala-lang\scala-swing\ivy-2.10.7.xml" searched="true" original-local-location="C:\Users\Pavel\.ivy2\cache\org.scala-lang\scala-swing\ivy-2.10.7.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-swing/2.10.7/scala-swing-2.10.7.pom"/>
+				<caller organisation="ch.epfl.scala" name="go_2.12" conf="compile-internal, compile, provided, optional" rev="2.10+" rev-constraint-default="2.10+" rev-constraint-dynamic="2.10+" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scala-swing" type="jar" ext="jar" status="successful" details="" size="707295" time="948" location="C:\Users\Pavel\.ivy2\cache\org.scala-lang\scala-swing\jars\scala-swing-2.10.7.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-swing/2.10.7/scala-swing-2.10.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.typelevel" name="cats-core_2.12">
 			<revision name="2.0.0-RC1" status="release" pubdate="20190805202922" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
@@ -53,6 +66,7 @@
 				<caller organisation="ch.epfl.scala" name="go_2.12" conf="compile-internal, compile, provided, optional" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="1.0"/>
 				<caller organisation="org.typelevel" name="cats-macros_2.12" conf="compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="2.0.0-RC1"/>
 				<caller organisation="org.typelevel" name="cats-core_2.12" conf="default, compile, runtime, master" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="2.0.0-RC1"/>
+				<caller organisation="org.scala-lang" name="scala-swing" conf="default, compile, runtime, master" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="2.10.7"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5272591" time="0" location="C:\Users\Pavel\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.jar"/>

@@ -1,0 +1,11 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mGameStateTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mplayMove on ocupppied fielg[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return OccupiedPositionexception[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mplaying an illegal siuciadal move[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return SuicidalMoveException[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mplaying an illegal siuciadal move on eye[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return SuicidalMoveException[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mplaying a legal siuciadal move[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should put a piece on the board[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mplaying an illegal repeating move[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return RepeatedMoveException[0m[0m

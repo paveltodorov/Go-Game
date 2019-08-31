@@ -1,5 +1,6 @@
 #Successful Tests
-#Fri Aug 30 02:27:46 EEST 2019
+#Sat Aug 31 04:20:09 EEST 2019
 GameLogic.ChainTest=1565817592744
+GameLogic.GameStateTest=1567214408850
 GameLogic.BoardTest=1567121100781
-GameLogic.GameGridTest=1567121266093
+GameLogic.GameGridTest=1567214408943

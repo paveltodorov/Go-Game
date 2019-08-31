@@ -1,9 +1,11 @@
 package GameLogic
 
-//import GameLogic.Piece
-
 case class GameGrid(grid: Vector[Vector[Piece]]) {
   type Chain = Set[Tuple2[Int, Int]]
+
+  def getWidth() : Int = grid(0).size
+
+  def getHight() : Int = grid.size
 
   def getChains(piece: Piece): Set[Chain] =
     getChainsHelper(Move((0, 0), piece), Set.empty, Set.empty)
@@ -53,8 +55,6 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
     }
   }
 
-  //type Grid = Vector[Vector[Piece]]
-
   def putPiece(move: Move): GameGrid = {
     GameGrid(
       grid.updated(
@@ -84,30 +84,17 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
     getLiberties(chain).isEmpty
   }
 
-  def isSuicidalMove(move: Move): Boolean = {
-    val newGrid: GameGrid = this.putPiece(move)
-    //val newBoard: Board = Board(rowCount,colCount,newGrid,score,move.piece)
-    //newBoard.isCaptured(getChainContaining(move.position._1, move.position._1))
-    newGrid.isCaptured(getChainContaining(move.position._1, move.position._1))
-  } //getChainContaining()
-
-  /*def getCapturedEnemyPositions(move: Move) : Chain = {
-  getChains(move.piece.opponentPiece).filter(x => isCaptured(x)).flatten
-
-}*/
-
   def getCapturedPiecesBelongingTo(piece: Piece): Chain = {
     getChains(piece).filter(x => isCaptured(x)).flatten
   }
 
-//def existCapturedChains(move: Move): Boolean = getCapturedEnemyPositions(move).isEmpty
-
   override def toString(): String = {
-    //grid.map(x => x.map(y => y.toString) + "\n") + "\n\nScore: " + score + "\nIs  " + nextPiece + "'s turn"
-    //grid.map(x => x.map(y => y.toString) + "\n").toString//.reduce(x:String => x.reduce)
-    //val score: String =  "\n\nScore: " + score + "\nIs  " + nextPiece + "'s turn"
-    grid.map(x => x.mkString).mkString("\n") //.replaceAll('[','')
-    //mkString("\n"))
+    grid.map(x => x.mkString).mkString("\n") 
+  }
+
+  def toStringWithMarkers(): String  = { 
+    ("012345678901234567890" take this.getWidth mkString) + "\n" + 
+    grid.zipWithIndex.map{case (x,i) => x.mkString + " " + i}.mkString("\n") 
   }
 
   def isInsideBoard(tuple: Tuple2[Int, Int]): Boolean = tuple.isInsideBoard
@@ -132,7 +119,7 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
 
     def getPiece(): Piece = grid(tuple._1)(tuple._2)
 
-//check if a field is Eye
+    //check if a field is Eye
     def isEye(piece: Piece): Boolean = {
       getNeighbours()
         .filter(x => grid(x._1)(x._2) == piece.opponentPiece)
@@ -140,22 +127,16 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
     }
 
     def getNextPosition(): Tuple2[Int, Int] = {
-      if (tuple._2 < grid(0).size - 1) (tuple._1, tuple._2 + 1)
-      else if (tuple._1 < (grid.size - 1)) (tuple._1 + 1, 0)
+      if (tuple._2 < getWidth - 1) (tuple._1, tuple._2 + 1)
+      else if (tuple._1 < (getHight - 1)) (tuple._1 + 1, 0)
       else null
     }
   }
-
 }
+
 
 object GameGrid {
   implicit class StringToGameGrid(str: String) {
-    def toGameGrid(): GameGrid = {
-      ???
-    }
-  }
-
-  implicit class GameGridToString(str: String) {
     def toGameGrid(): GameGrid = {
       ???
     }
@@ -187,5 +168,4 @@ object GameGrid {
       case _   => Empty
     }
   }
-
 }

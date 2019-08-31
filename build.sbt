@@ -26,6 +26,7 @@ version := "1.0"
 //libraryDependencies += "org.typelevel" %% "cats-core" % "1.6.0"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0-RC1"
+libraryDependencies += "org.scala-lang" % "scala-swing" % "2.10+"
 
 //scalacOptions += "-Ypartial-unification"
 

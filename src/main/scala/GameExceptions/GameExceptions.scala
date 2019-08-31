@@ -1,15 +1,29 @@
 package GameExceptions
 
-sealed trait GoException
+import GameExceptions._
 
-case class PositionNotInBoardException(positioin: Tuple2[Int,Int]) extends GoException
+sealed trait GoException{
+	val description: String = ""
+}
 
-case class SuicidalMoveException(positioin: Tuple2[Int,Int]) extends GoException
+case class PositionNotInBoardException(position: Tuple2[Int,Int]) extends GoException {
+	override val description: String = position.toString + " is outside the bord"
+}
 
-case class RepeatedMoveException(positioin: Tuple2[Int,Int]) extends GoException
+case class SuicidalMoveException(position: Tuple2[Int,Int]) extends GoException {
+	override val description: String = position.toString + " is an illegal suicidal (or self-capture) move. "
+}
 
-case class PositionIsEyeException(positioin: Tuple2[Int,Int]) extends GoException
+case class RepeatedMoveException(position: Tuple2[Int,Int]) extends GoException{
+	override val description: String = position.toString + " is illegal because playing on it repeates the previous game state"
+}
 
-case class OccupiedPositionexception(positioin: Tuple2[Int,Int]) extends GoException
+/*case class PositionIsEyeException(position: Tuple2[Int,Int]) extends GoException {
+	override val description: String = position.toString + " is an eye"
+}*/
+
+case class OccupiedPositionException(position: Tuple2[Int,Int]) extends GoException{
+	override val description: String = position.toString + " is already ocupied by another piece"
+}
 
 
