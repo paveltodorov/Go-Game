@@ -1,16 +1,16 @@
 # Go-Game
-This is my implementation of the popular Japanese game of Go.
-I have used multitrading so that the game can be played by 2 players. 
-The game logic is implemented in a purely functional style.
+This is my implementation of the popular Japanese game of Go.<br>
+I have used multitrading so that the game can be played by 2 players.<br> 
+The game logic is implemented in a purely functional style.<br><br>
 
-Rules: https://www.siammandalay.com/blogs/puzzles/play-go-board-game-instructions-rules-strategies
+Rules: https://www.siammandalay.com/blogs/puzzles/play-go-board-game-instructions-rules-strategies<br><br>
 
-The game has command interface.
-Commands:
-  n - creates a new board with dimentions 9x9\n
-  new - creates a new board with dimentions 9x9\n
-  n-d-k - creates a new board with dimentions d and komi -k\n
-  i-j - plays a move on position (i j)\n
-  pass - current player passes his/her turn\n
-  s - you surrender the game\n
-  h - prints all commands\n
+The game has command interface.<br>
+Commands:<br>
+  n - creates a new board with dimentions 9x9<br> 
+  new - creates a new board with dimentions 9x9<br>
+  n-d-k - creates a new board with dimentions d and komi -k<br>
+  i-j - plays a move on position (i j)<br>
+  pass - current player passes his/her turn<br>
+  s - you surrender the game<br>
+  h - prints all commands<br>
