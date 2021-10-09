@@ -5,7 +5,7 @@ import GameLogic.GameGrid.StringVectorToGameGrid
 
 class GameGridTest extends FlatSpec with Matchers {
 
-  "getChains(BlackPiece)" should "return the chains belonging to blackplayer" in {
+  "getChains(BlackPiece)" should "return the chains belonging to black player" in {
     val vectorGrid: Vector[String] =
       Vector("..BB..", ".BBBWW", "BWW...", "B.....")
 

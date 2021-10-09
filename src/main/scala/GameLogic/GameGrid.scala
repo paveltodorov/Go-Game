@@ -1,7 +1,7 @@
 package GameLogic
 
 case class GameGrid(grid: Vector[Vector[Piece]]) {
-  type Chain = Set[Tuple2[Int, Int]]
+  type Chain = Set[(Int,Int)]
 
   def getWidth() : Int = grid(0).size
 
@@ -15,7 +15,7 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
       chains: Set[Chain],
       visited: Chain
   ): Set[Chain] = {
-    val nextPosition: Tuple2[Int, Int] = move.position.getNextPosition()
+    val nextPosition: (Int,Int) = move.position.getNextPosition()
 
     if (nextPosition != null) {
       val i = move.position._1
@@ -64,23 +64,23 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
     )
   }
 
-  def removePiece(tuple: Tuple2[Int, Int]): GameGrid = {
+  def removePiece(tuple: (Int,Int)): GameGrid = {
     GameGrid(
       grid.updated(tuple._1, grid(tuple._1).updated(tuple._2, Empty: Piece))
     )
   }
 
-  def removeChains(positionsToBeRemoved: List[Tuple2[Int, Int]]): GameGrid =
+  def removeChains(positionsToBeRemoved: List[(Int,Int)]): GameGrid =
     positionsToBeRemoved match {
       case Nil       => this
       case (x :: xs) => this.removePiece(x).removeChains(xs)
     }
 
-  def getLiberties(chain: Set[Tuple2[Int, Int]]): Set[Tuple2[Int, Int]] = {
+  def getLiberties(chain: Set[(Int,Int)]): Set[(Int,Int)] = {
     chain.flatMap(x => x.getNeighbours).filter(x => grid(x._1)(x._2) == Empty)
   }
 
-  def isCaptured(chain: Set[Tuple2[Int, Int]]): Boolean = {
+  def isCaptured(chain: Set[(Int,Int)]): Boolean = {
     getLiberties(chain).isEmpty
   }
 
@@ -97,12 +97,12 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
     grid.zipWithIndex.map{case (x,i) => x.mkString + " " + i}.mkString("\n") 
   }
 
-  def isInsideBoard(tuple: Tuple2[Int, Int]): Boolean = tuple.isInsideBoard
+  def isInsideBoard(tuple: (Int,Int)): Boolean = tuple.isInsideBoard
 
-  def isOccupied(tuple: Tuple2[Int, Int]): Boolean = tuple.isOccupied
+  def isOccupied(tuple: (Int,Int)): Boolean = tuple.isOccupied
 
-  implicit class Neighbour(tuple: Tuple2[Int, Int]) {
-    def getNeighbours(): Set[Tuple2[Int, Int]] = {
+  implicit class Neighbour(tuple: (Int,Int)) {
+    def getNeighbours(): Set[(Int,Int)] = {
       val neighborDisplacement = Set((-1, 0), (1, 0), (0, -1), (0, 1))
       neighborDisplacement
         .map({ case (dx, dy) => (tuple._1 + dx, tuple._2 + dy) })
@@ -126,7 +126,7 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
         .size == 4
     }
 
-    def getNextPosition(): Tuple2[Int, Int] = {
+    def getNextPosition(): (Int,Int) = {
       if (tuple._2 < getWidth - 1) (tuple._1, tuple._2 + 1)
       else if (tuple._1 < (getHight - 1)) (tuple._1 + 1, 0)
       else null

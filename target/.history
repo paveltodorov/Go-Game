@@ -137,3 +137,9 @@ sbt
 run
 test
 run
+test
+compile
+run
+run 
+compile
+test

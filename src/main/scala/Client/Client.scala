@@ -10,8 +10,6 @@ import java.util.Scanner
 import Client._
 //import cats.effect.IO
 
-//object effect is not a member of package cats ???
-
 object Client {
 
   def main(args: Array[String]): Unit = {

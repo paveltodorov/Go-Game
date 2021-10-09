@@ -1,3 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating C:\Users\Pavel\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar: class scala.MatchError now provided by C:\Users\Aser\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating C:\Users\Pavel\.ivy2\cache\org.scalactic\scalactic_2.12\bundles\scalactic_2.12-3.0.5.jar: class org.scalactic.Equality$ now provided by C:\Users\Aser\.ivy2\cache\org.scalactic\scalactic_2.12\bundles\scalactic_2.12-3.0.5.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating C:\Users\Pavel\.ivy2\cache\org.scalatest\scalatest_2.12\bundles\scalatest_2.12-3.0.5.jar: class org.scalatest.compatible.Assertion now provided by C:\Users\Aser\.ivy2\cache\org.scalatest\scalatest_2.12\bundles\scalatest_2.12-3.0.5.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0mThe GameLogic.GameState has the following regular definitions changed:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	UsedName(validateMoveIsNotRepeated,[Default]).[0m
 [0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
@@ -5,4 +8,37 @@
 [0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) GameLogic.GameState.[0m
 [0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of GameLogic.GameStateTest. This dependency is not being considered for invalidation.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set(C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameStateTest.scala, C:\Users\Pavel\Documents\Scala\go\src\test\scala\Game Logic\ChainTest.scala, C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala, C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\ChainTest.scala, C:\Users\Pavel\Documents\Scala\go\src\test\scala\Game Logic\GameTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(C:\Users\Aser\Pictures\Go Game\src\test\scala\GameLogic\GameGridTest.scala, C:\Users\Aser\Pictures\Go Game\src\test\scala\GameLogic\GameStateTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(C:\Users\Pavel\Documents\Scala\Go\target\scala-2.12\test-classes\GameLogic\GameGridTest.class, C:\Users\Pavel\Documents\Scala\Go\target\scala-2.12\test-classes\GameLogic\GameStateTest.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set(NamesChange(GameLogic.GameState,ModifiedNames(changes = UsedName(validateMoveIsNotRepeated,[Default]))))[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set(C:\Users\Pavel\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar, C:\Users\Pavel\.ivy2\cache\org.scalactic\scalactic_2.12\bundles\scalactic_2.12-3.0.5.jar, C:\Users\Pavel\.ivy2\cache\org.scalatest\scalatest_2.12\bundles\scalatest_2.12-3.0.5.jar)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(GameLogic.GameStateTest, GameLogic.GameGridTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala, C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameStateTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set(C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala, C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameStateTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(GameLogic.GameStateTest, GameLogic.GameGridTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(C:\Users\Aser\Pictures\Go Game\src\test\scala\GameLogic\GameGridTest.scala, C:\Users\Aser\Pictures\Go Game\src\test\scala\GameLogic\GameStateTest.scala, C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameGridTest.scala, C:\Users\Pavel\Documents\Scala\Go\src\test\scala\GameLogic\GameStateTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 2 sources: invalidated sources (4) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Scala sources to C:\Users\Aser\Pictures\Go Game\target\scala-2.12\test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler f677c7f for Scala compiler version 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Aser\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.8.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Aser\Pictures\Go Game\target\scala-2.12\test-classes;C:\Users\Aser\Pictures\Go Game\target\scala-2.12\classes;C:\Users\Aser\.ivy2\cache\org.typelevel\cats-core_2.12\jars\cats-core_2.12-2.0.0-RC1.jar;C:\Users\Aser\.ivy2\cache\org.typelevel\cats-macros_2.12\jars\cats-macros_2.12-2.0.0-RC1.jar;C:\Users\Aser\.ivy2\cache\org.typelevel\cats-kernel_2.12\jars\cats-kernel_2.12-2.0.0-RC1.jar;C:\Users\Aser\.ivy2\cache\org.scala-lang\scala-swing\jars\scala-swing-2.10.7.jar;C:\Users\Aser\.ivy2\cache\org.scalatest\scalatest_2.12\bundles\scalatest_2.12-3.0.5.jar;C:\Users\Aser\.ivy2\cache\org.scalactic\scalactic_2.12\bundles\scalactic_2.12-3.0.5.jar;C:\Users\Aser\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.12.8.jar;C:\Users\Aser\.ivy2\cache\org.scala-lang.modules\scala-xml_2.12\bundles\scala-xml_2.12-1.0.6.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 6.2048253 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m
