@@ -1,21 +1,20 @@
 package GameLogic
 
 case class GameGrid(grid: Vector[Vector[Piece]]) {
-  type Chain = Set[(Int,Int)]
+  type Chain = Set[(Int, Int)]
 
-  def getWidth() : Int = grid(0).size
+  def getWidth(): Int = grid(0).size
 
-  def getHight() : Int = grid.size
+  def getHight(): Int = grid.size
 
   def getChains(piece: Piece): Set[Chain] =
     getChainsHelper(Move((0, 0), piece), Set.empty, Set.empty)
 
   def getChainsHelper(
-      move: Move,
-      chains: Set[Chain],
-      visited: Chain
-  ): Set[Chain] = {
-    val nextPosition: (Int,Int) = move.position.getNextPosition()
+    move: Move,
+    chains: Set[Chain],
+    visited: Chain): Set[Chain] = {
+    val nextPosition: (Int, Int) = move.position.getNextPosition()
 
     if (nextPosition != null) {
       val i = move.position._1
@@ -25,8 +24,7 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
         getChainsHelper(
           Move(nextPosition, move.piece),
           chains + currentChain,
-          visited ++ currentChain
-        )
+          visited ++ currentChain)
       } else {
         getChainsHelper(Move(nextPosition, move.piece), chains, visited)
       }
@@ -39,10 +37,9 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
     BFS(Seq((x, y)), Set.empty, Set.empty)
 
   def BFS(
-      toVisit: Seq[(Int, Int)],
-      visited: Set[(Int, Int)],
-      chain: Chain
-  ): Chain = toVisit.isEmpty match {
+    toVisit: Seq[(Int, Int)],
+    visited: Set[(Int, Int)],
+    chain: Chain): Chain = toVisit.isEmpty match {
     case true => chain
     case false => {
       val position: (Int, Int) = toVisit.head
@@ -59,28 +56,25 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
     GameGrid(
       grid.updated(
         move.position._1,
-        grid(move.position._1).updated(move.position._2, move.piece: Piece)
-      )
-    )
+        grid(move.position._1).updated(move.position._2, move.piece: Piece)))
   }
 
-  def removePiece(tuple: (Int,Int)): GameGrid = {
+  def removePiece(tuple: (Int, Int)): GameGrid = {
     GameGrid(
-      grid.updated(tuple._1, grid(tuple._1).updated(tuple._2, Empty: Piece))
-    )
+      grid.updated(tuple._1, grid(tuple._1).updated(tuple._2, Empty: Piece)))
   }
 
-  def removeChains(positionsToBeRemoved: List[(Int,Int)]): GameGrid =
+  def removeChains(positionsToBeRemoved: List[(Int, Int)]): GameGrid =
     positionsToBeRemoved match {
-      case Nil       => this
+      case Nil => this
       case (x :: xs) => this.removePiece(x).removeChains(xs)
     }
 
-  def getLiberties(chain: Set[(Int,Int)]): Set[(Int,Int)] = {
+  def getLiberties(chain: Set[(Int, Int)]): Set[(Int, Int)] = {
     chain.flatMap(x => x.getNeighbours).filter(x => grid(x._1)(x._2) == Empty)
   }
 
-  def isCaptured(chain: Set[(Int,Int)]): Boolean = {
+  def isCaptured(chain: Set[(Int, Int)]): Boolean = {
     getLiberties(chain).isEmpty
   }
 
@@ -89,20 +83,20 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
   }
 
   override def toString(): String = {
-    grid.map(x => x.mkString).mkString("\n") 
+    grid.map(x => x.mkString).mkString("\n")
   }
 
-  def toStringWithMarkers(): String  = { 
-    ("012345678901234567890" take this.getWidth mkString) + "\n" + 
-    grid.zipWithIndex.map{case (x,i) => x.mkString + " " + i}.mkString("\n") 
+  def toStringWithMarkers(): String = {
+    ("012345678901234567890" take this.getWidth mkString) + "\n" +
+      grid.zipWithIndex.map { case (x, i) => x.mkString + " " + i }.mkString("\n")
   }
 
-  def isInsideBoard(tuple: (Int,Int)): Boolean = tuple.isInsideBoard
+  def isInsideBoard(tuple: (Int, Int)): Boolean = tuple.isInsideBoard
 
-  def isOccupied(tuple: (Int,Int)): Boolean = tuple.isOccupied
+  def isOccupied(tuple: (Int, Int)): Boolean = tuple.isOccupied
 
-  implicit class Neighbour(tuple: (Int,Int)) {
-    def getNeighbours(): Set[(Int,Int)] = {
+  implicit class Neighbour(tuple: (Int, Int)) {
+    def getNeighbours(): Set[(Int, Int)] = {
       val neighborDisplacement = Set((-1, 0), (1, 0), (0, -1), (0, 1))
       neighborDisplacement
         .map({ case (dx, dy) => (tuple._1 + dx, tuple._2 + dy) })
@@ -126,14 +120,13 @@ case class GameGrid(grid: Vector[Vector[Piece]]) {
         .size == 4
     }
 
-    def getNextPosition(): (Int,Int) = {
+    def getNextPosition(): (Int, Int) = {
       if (tuple._2 < getWidth - 1) (tuple._1, tuple._2 + 1)
       else if (tuple._1 < (getHight - 1)) (tuple._1 + 1, 0)
       else null
     }
   }
 }
-
 
 object GameGrid {
   implicit class StringToGameGrid(str: String) {
@@ -151,12 +144,12 @@ object GameGrid {
       case 'B' => BlackPiece
       case 'W' => WhitePiece
       case '.' => Empty
-      case _   => Empty
+      case _ => Empty
     }
   }
 
   implicit class StringVectorToGameGrid(val vector: Vector[String])
-      extends AnyVal {
+    extends AnyVal {
     def toGameGrid(): GameGrid = {
       GameGrid(vector.map(x => x.map(y => characterToPiece(y)).toVector))
     }
@@ -165,7 +158,7 @@ object GameGrid {
       case 'B' => BlackPiece
       case 'W' => WhitePiece
       case '.' => Empty
-      case _   => Empty
+      case _ => Empty
     }
   }
 }

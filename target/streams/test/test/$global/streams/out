@@ -1,6 +1,6 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(GameLogic.GameGridTest, org.scalatest.tools.Framework$$anon$1@30a42f56, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(GameLogic.GameStateTest, org.scalatest.tools.Framework$$anon$1@30a42f56, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 199 milliseconds.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(GameLogic.GameGridTest, org.scalatest.tools.Framework$$anon$1@7ba54d0c, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(GameLogic.GameStateTest, org.scalatest.tools.Framework$$anon$1@7ba54d0c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 223 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 14[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 14, failed 0, canceled 0, ignored 0, pending 0[0m[0m

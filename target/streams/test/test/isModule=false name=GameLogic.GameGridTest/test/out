@@ -1,6 +1,6 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mGameGridTest:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mgetChains(BlackPiece)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return the chains belonging to blackplayer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the chains belonging to black player[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mgetChains(BlackPiece) if the black player has no pieces[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return an empty set[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mgetChains(WhitePiece)[0m[0m

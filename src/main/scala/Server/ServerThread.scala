@@ -10,9 +10,9 @@ import GameLogic._
 import Server.Commands._
 
 class ServerThread(var socket: Socket, var gameState: GameState) extends Thread {
-   val reader: BufferedReader = new BufferedReader(
+  val reader: BufferedReader = new BufferedReader(
     new InputStreamReader(socket.getInputStream))
-   val writer: PrintWriter =
+  val writer: PrintWriter =
     new PrintWriter(socket.getOutputStream, true)
 
   def sendMessageToClient(msg: String): Unit = {
@@ -21,16 +21,16 @@ class ServerThread(var socket: Socket, var gameState: GameState) extends Thread 
   }
 
   override def run(): Unit = {
-    try{
-      while(true){
+    try {
+      while (true) {
         val input: String = reader.readLine()
-        val (newState,output): (GameState,String) = input.executeCommand(gameState)
+        val (newState, output): (GameState, String) = input.executeCommand(gameState)
         //gameState = newState.copy(newState.grid,newState.score,newState.turn,newState.boardHistory)
         gameState = newState
-        sendMessageToClient(input + "\n\n" + newState.toString + "\n" + 
+        sendMessageToClient(input + "\n\n" + newState.toString + "\n" +
           output + "\n" + "it is " + newState.turn.toString + " 's turn")
       }
-     }catch {
+    } catch {
       case e: IOException => println(e)
 
     } finally try {
