@@ -8,6 +8,9 @@ import java.net.Socket
 import java.net.UnknownHostException
 import java.util.Scanner
 import Client._
+import io.IO
+import io.Console._
+import scala.io.StdIn
 //import cats.effect.IO
 
 object Client {
@@ -33,16 +36,19 @@ class Client() {
     receiver.start()
 
     try while (true) {
-      val msg: String = sc.next()
-      out.println(msg)
-      out.flush()
+      // val msg: String = sc.next()
+      // out.println(msg)
+      // out.flush()
 
-      /*val program = for {
-        msg <- IO(sc.next())
-        _ <- IO(out.println(msg))
-        _ <- IO(out.flush())
-      } yield ()
-     program.unsafeRun()*/
+      // val msg = IO(() => sc.next())
+      // val msg.flatMap(x => out.println(x))
+      val program = for {
+        msg <- IO(() => sc.next())
+        _ <- IO(() => out.println(msg))
+        _ <- IO(() => out.flush())
+      } yield msg
+      program.unsafeRun()
+
     } finally sc.close()
   }
 

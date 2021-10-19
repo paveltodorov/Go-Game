@@ -1,7 +1,8 @@
 package GameLogic
 
-//import io.IO
-//import io.Console._
+import io.IO
+import io.Console._
+import scala.io.StdIn
 //import cats.effect.IO
 
 object Main extends App {
@@ -13,16 +14,26 @@ object Main extends App {
    case _ => println("error")
 }
 
-}
- //def errorToDescription
+//Console.putStrLn("5")
+//IO(() => println("Heloo"))
 
-/* def loop: IO[String] = for {
+val program = for {
  	_ <- putStrLn("Hello ")
     input <- getStrLn
     _ <- putStrLn(input)
   } yield input
 
-}*/
+program.unsafeRun();
+}
+ //def errorToDescription
+
+/*
+ def loop: IO[String] = for {
+ 	_ <- Console.putStrLn("Hello ")
+    input <- Console.getStrLn
+    _ <- Console.putStrLn(input)
+  } yield input
+*/
 /*def processInput(input: String) : String {
  case  => bord.toAtring
  case "pass" => 
